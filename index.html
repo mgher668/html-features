@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Features</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="https://i.pravatar.cc/" target="_blank">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <h1>HTML Features.</h1>
+    <a href="https://twitter.com/_georgemoller/status/1543972426215825412" target="_blank">From Twitter</a>
+    <a></a>
+    <h2>1. input suggestions</h2>
+    <label for="ice-choose">Choose one:</label>
+    <input list="ice-list" id="ice-choose" name="ice-choose" />
+
+    <datalist id="ice-list">
+      <option value="a"></option>
+      <option value="b"></option>
+      <option value="c"></option>
+      <option value="d"></option>
+    </datalist>
+
+    <h2>2. details disclosure</h2>
+    <details>
+      <summary>Frequently asked questions</summary>
+      This is the FAQ detail
+    </details>
+    <details>
+      <summary>Privacy Policy</summary>
+      This is the privacy policy detail
+    </details>
+
+    <h2>3. the <base> element</h2>
+    <img src="/150?img=9" alt="some profile image" />
+    <img src="/150?img=10" alt="some profile image" />
+    <a href="300?img=9">Go to image 9</a>
+    <a href="300?img=10">Go to image 10</a>
+
+    <h2>4. lazy loading images & iframes</h2>
+    <p>You can add the <strong>loading</strong> attribute and set its value to <strong>lazy</strong> to defer the loading of both images and iframes until they become visible in the browser.</p>
+    <img src="/300?img=5" alt="lazy" />
+    <iframe src="/300?img=5" width="300" height="300" loading="lazy"></iframe>
+
+    <h2>5. The picture element</h2>
+    <p>The HTML <strong>&#60;picture&#62;</strong> element contains zero or more <strong>&#60;source&#62;</strong> elements and one <strong>&#60;img&#62;</strong> element to offer alternative versions of an image ofr different display/device scenarios.</p>
+    <picture>
+      <source media="(min-width: 800px)" srcset="/600?img=32, head-1x.jpg 2x">
+      <source media="(min-width: 450px)" srcset="/300?img=32, head-small-2x.jpg 2x">
+      <img src="/200?img=32" srcset="/200?img=32 2x" alt="a head carved out of wood">
+    </picture>
+  </body>
+</html>
